@@ -1,1 +1,48 @@
+// Navigation
+document.querySelectorAll("[data-section]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const section = btn.dataset.section;
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    document.getElementById(section).classList.add("active");
+    window.scrollTo(0, 0);
+  });
+});
+
+// Panier
+let cart = [];
+const cartBox = document.getElementById("cart");
+const cartItems = document.getElementById("cart-items");
+const cartTotal = document.getElementById("cart-total");
+
+document.addEventListener("click", e => {
+  if (e.target.classList.contains("add-to-cart")) {
+    cart.push({
+      name: e.target.dataset.name,
+      price: Number(e.target.dataset.price)
+    });
+    updateCart();
+  }
+});
+
+function updateCart() {
+  cartItems.innerHTML = "";
+  let total = 0;
+
+  cart.forEach((item, index) => {
+    total += item.price;
+    cartItems.innerHTML += `
+      <p>${item.name} - ${item.price} €
+      <button onclick="removeItem(${index})">❌</button></p>`;
+  });
+
+  cartTotal.textContent = total;
+}
+
+function removeItem(index) {
+  cart.splice(index, 1);
+  updateCart();
+}
+
+document.getElementById("open-cart").onclick = () => cartBox.classList.remove("hidden");
+document.getElementById("close-cart").onclick = () => cartBox.classList.add("hidden");
 
