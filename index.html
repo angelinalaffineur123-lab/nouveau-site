@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Purr & Pink 🐾 – Boutique pour chats</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Purr & Pink 🐾</div>
+  <nav>
+    <ul>
+      <li data-section="home">Accueil</li>
+      <li data-section="vestes">Vestes</li>
+      <li data-section="colliers">Colliers</li>
+      <li data-section="jouets">Jouets</li>
+      <li data-section="contact">Contact</li>
+      <li id="open-cart">Panier 🛒</li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ACCUEIL -->
+<section id="home" class="page active">
+  <div class="hero">
+    <h1>Des accessoires mignons pour chats heureux</h1>
+    <p>Style, confort et fun pour ton félin 💖</p>
+    <button class="cta" data-section="vestes">Voir la boutique</button>
+  </div>
+
+  <h2>Produits populaires</h2>
+  <div class="products">
+    <div class="product">
+      <img src="images/veste-rose.jpg">
+      <h3>Veste rose</h3>
+      <p class="product-price">29€</p>
+      <button class="add-to-cart" data-name="Veste rose" data-price="29">Ajouter au panier</button>
+    </div>
+
+    <div class="product">
+      <img src="images/collier-coeur.jpg">
+      <h3>Collier cœur</h3>
+      <p class="product-price">15€</p>
+      <button class="add-to-cart" data-name="Collier cœur" data-price="15">Ajouter au panier</button>
+    </div>
+
+    <div class="product">
+      <img src="images/plume-magique.jpg">
+      <h3>Plume magique</h3>
+      <p class="product-price">12€</p>
+      <button class="add-to-cart" data-name="Plume magique" data-price="12">Ajouter au panier</button>
+    </div>
+  </div>
+
+  <h2>Avis clients</h2>
+  <div class="reviews">
+    <p>⭐⭐⭐⭐⭐ Mon chat adore ! – Léa</p>
+    <p>⭐⭐⭐⭐⭐ Trop mignon et qualité top – Emma</p>
+  </div>
+</section>
+
+<!-- VESTES -->
+<section id="vestes" class="page">
+  <h1>Vestes pour chats</h1>
+  <div class="products">
+    <div class="product">
+      <img src="images/veste-rose.jpg">
+      <h3>Veste rose</h3>
+      <p class="product-price">29€</p>
+      <button class="add-to-cart" data-name="Veste rose" data-price="29">Ajouter</button>
+    </div>
+    <div class="product">
+      <img src="images/veste-dhiver.jpg">
+      <h3>Veste d’hiver</h3>
+      <p class="product-price">35€</p>
+      <button class="add-to-cart" data-name="Veste d’hiver" data-price="35">Ajouter</button>
+    </div>
+    <div class="product">
+      <img src="images/veste-impermeable.jpg">
+      <h3>Veste imperméable</h3>
+      <p class="product-price">39€</p>
+      <button class="add-to-cart" data-name="Veste imperméable" data-price="39">Ajouter</button>
+    </div>
+  </div>
+</section>
+
+<!-- COLLIERS -->
+<section id="colliers" class="page">
+  <h1>Colliers pour chats</h1>
+  <div class="products">
+    <div class="product">
+      <img src="images/collier-coeur.jpg">
+      <h3>Collier cœur</h3>
+      <p class="product-price">15€</p>
+      <button class="add-to-cart" data-name="Collier cœur" data-price="15">Ajouter</button>
+    </div>
+    <div class="product">
+      <img src="images/collier-clochette.jpg">
+      <h3>Collier clochette</h3>
+      <p class="product-price">12€</p>
+      <button class="add-to-cart" data-name="Collier clochette" data-price="12">Ajouter</button>
+    </div>
+    <div class="product">
+      <img src="images/collier-chic.jpg">
+      <h3>Collier chic</h3>
+      <p class="product-price">18€</p>
+      <button class="add-to-cart" data-name="Collier chic" data-price="18">Ajouter</button>
+    </div>
+  </div>
+</section>
+
+<!-- JOUETS -->
+<section id="jouets" class="page">
+  <h1>Jouets pour chats</h1>
+  <div class="products">
+    <div class="product">
+      <img src="images/plume-magique.jpg">
+      <h3>Plume magique</h3>
+      <p class="product-price">12€</p>
+      <button class="add-to-cart" data-name="Plume magique" data-price="12">Ajouter</button>
+    </div>
+    <div class="product">
+      <img src="images/balle-interactive.jpg">
+      <h3>Balle interactive</h3>
+      <p class="product-price">10€</p>
+      <button class="add-to-cart" data-name="Balle interactive" data-price="10">Ajouter</button>
+    </div>
+    <div class="product">
+      <img src="images/souris-peluche.jpg">
+      <h3>Souris peluche</h3>
+      <p class="product-price">9€</p>
+      <button class="add-to-cart" data-name="Souris peluche" data-price="9">Ajouter</button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="page">
+  <h1>Contact</h1>
+  <form class="contact-form">
+    <input type="text" placeholder="Nom">
+    <input type="email" placeholder="Email">
+    <textarea placeholder="Message"></textarea>
+    <button>Envoyer</button>
+  </form>
+</section>
+
+<!-- PANIER -->
+<div id="cart" class="cart hidden">
+  <h2>Panier</h2>
+  <div id="cart-items"></div>
+  <p>Total : <span id="cart-total">0</span> €</p>
+  <button id="close-cart">Fermer</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
 
